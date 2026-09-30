@@ -113,7 +113,7 @@ Goal: get a PR reviewed and merged in a live codebase. This is the level for peo
  
 The project is in [`Level_4/A_guided/lunch-lab/`](Level_4/A_guided/lunch-lab/). Read its README first (it is broken too, and that is one of the issues).
  
-How 4A works: open the Issues tab and filter by `level4-guided`. Comment on one and wait to be assigned. Each issue says what is missing and how we will check it. Your PR must change only the files that issue needs, and should include a test that fails without your fix and passes with it. The AI tool policy applies as in Level 3: disclose it and explain every line. There is no log file for 4A; your merged PR is the record. Because all the issues live in one project, the rule is one issue at a time.
+How 4A works: open the Issues tab and filter by `level4-guided`. Each issue says what is missing and how we will check it. Your PR must change only the files that issue needs, and should include a test that fails without your fix and passes with it. The AI tool policy applies as in Level 3: disclose it and explain every line. There is no log file for 4A; your merged PR is the record. Because all the issues live in one project, the rule is one issue at a time.
  
 **4B. Real: contribute to any real open-source AI/ML project online** — a library, a tool, a research codebase, anything genuinely open to outside contributors. Find a real open issue, get it assigned or confirm it's fair game, and submit a real PR.
  

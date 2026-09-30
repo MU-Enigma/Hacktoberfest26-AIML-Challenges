@@ -26,7 +26,7 @@ You can also search all of GitHub for `label:"good first issue" state:open langu
 
 **1. Check the project is alive.** Recent commits in the last few weeks, and maintainers replying to other issues. If issues sit unanswered for months, pick another project.
 
-**2. Read `CONTRIBUTING.md` first.** It tells you how the project wants you to claim an issue. Some assign you, some want a comment, some say "just open the PR". Follow theirs, not ours. Also look for an **AI or LLM contribution policy**. Some projects restrict AI-generated PRs, and their rule beats ours.
+**2. Read `CONTRIBUTING.md` first.** look for an **AI or LLM contribution policy**. Some projects restrict AI-generated PRs, and their rule beats ours.
 
 **3. Pick a small, clear issue.** Good signs:
 - the issue says exactly what is wrong and what a fix looks like
