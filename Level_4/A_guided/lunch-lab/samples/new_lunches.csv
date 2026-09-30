@@ -1,0 +1,4 @@
+queue_length,plate_waste_fraction,menu_board_kcal,handwriting_neatness
+70,0.15,2200,6.0
+15,0.75,1900,4.0
+40,0.40,2050,5.0
