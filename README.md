@@ -1,6 +1,6 @@
-# Enigma-AIML26
-
-Welcome to **Enigma-AIML26**, Enigma's Hacktoberfest 2026 repo.
+# Hacktoberfest26-AIML-Challenges
+ 
+Welcome to **Hacktoberfest26-AIML-Challenges**, Enigma's Hacktoberfest 2026 repo.
 
 This year's theme is **AI Education for All**. Every level asks you to build something that helps another person understand AI, not just something that runs.
 
@@ -176,12 +176,14 @@ A merged docs fix or small bug fix is a great result. A huge PR that nobody revi
 ## Contribution guide
 
 1. Fork this repo (Levels 1–3). For Level 4, fork the actual target repo instead
-2. Clone your fork: `git clone https://github.com/<your-username>/Enigma-AIML26.git`
+2. Clone your fork: `git clone https://github.com/<your-username>/Hacktoberfest26-AIML-Challenges.git`
 3. Create a branch: `git checkout -b my-branch-name`
 4. Make your changes in the right level folder, inside a folder named after your GitHub username
 5. Commit with a meaningful message: `git add .` then `git commit -m "Added sigmoid, ReLU, tanh"`
 6. Push: `git push origin my-branch-name`
 7. Open a Pull Request with a clear description
 8. Respond to review comments by pushing new commits to the same branch
+Tips: keep PRs focused (one feature or fix each), sync your fork before starting new work, and ask in your PR thread or ask a lead if you are stuck. Full details, including how to sync your fork, are in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 
 Tips: keep PRs focused (one feature or fix each), sync your fork before starting new work, and ask in your PR thread or ask a lead if you are stuck. Full details, including how to sync your fork, are in [CONTRIBUTING.md](CONTRIBUTING.md).
