@@ -4,7 +4,7 @@ Read the [README](README.md) first for the levels and ground rules. This file is
 
 ## Before you open a PR
 
-1. **Pick one option per level.** Levels 3 and 4 offer two options. A second option in the same level is a bonus and is reviewed last.
+1. **Pick one option per level.** Levels 3 and 4 offer two options. A second option in the same level is a bonus and is reviewed last. 
 2. **One open PR at a time.** Finish or close one before opening the next.
 3. **Work only in your own folder**, named after your GitHub username, inside the right level folder (for example `Level_1/<your-github-username>/`). The exception is Level 4A, where you edit the existing files in `Level_4/A_guided/lunch-lab/` that your issue names.
 
