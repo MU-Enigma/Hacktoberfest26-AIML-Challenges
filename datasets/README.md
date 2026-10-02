@@ -1,22 +1,22 @@
 # Datasets
 
-All data here is **synthetic**: made up for teaching, not taken from a real mess. The story is *"will the mess lunch be good today?"*
+All data here is **synthetic**: made up for teaching. Level 1 is a song recommender, Levels 2 and 4A use the *"will the mess lunch be good today?"* story.
 
-## `past_lunches.csv` (Level 1)
+## `songs.csv` (Level 1)
 
-8 past lunches, one per row.
+10 made-up songs, one per row. The titles and numbers are invented, not taken from any music service.
 
 | Column | Meaning |
 |--------|---------|
-| `dish` | name of the dish (a label only, not a number to compute with) |
-| `queue_length` | number of people in the queue at 12:30 |
-| `plate_waste_fraction` | fraction of plates returned with food left (0 to 1) |
-| `menu_board_kcal` | calories the menu board claims for the day |
-| `handwriting_neatness` | how neat the handwriting on the menu board is (1 to 10) |
+| `title` | name of the song (a label only, not a number to compute with) |
+| `tempo_bpm` | beats per minute |
+| `duration_sec` | length in seconds |
+| `energy` | how intense the song feels (0 to 1) |
+| `danceability` | how easy it is to dance to (0 to 1) |
 
 ## `binary_classification.csv` (Level 2)
 
-500 logged lunches, one per row. Same four numeric columns as above, plus the label:
+500 logged lunches, one per row. Four numeric columns (`queue_length`, `plate_waste_fraction`, `menu_board_kcal`, `handwriting_neatness`) plus the label:
 
 | Column | Meaning |
 |--------|---------|

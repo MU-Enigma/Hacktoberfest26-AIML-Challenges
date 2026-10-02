@@ -8,7 +8,7 @@ You need loops, functions, vectors and derivatives to take part. You do not need
 
 A note on the tasks: they are deliberately few. Several ask you to **predict** what will happen *before* you run something, then check. Being wrong is fine. Explaining why you were wrong is the point.
 
-**The story for Levels 1 and 2: will the mess lunch be good today?** The data is made up for teaching (it is not from a real mess). Your code should work on any table of numbers, the story is just the example.
+**The stories:** Level 1 is a song recommender (which song is most like the one you just loved?). Level 2 is the mess lunch (will it be good today?). All data is made up for teaching, not taken from Spotify or a real mess. Your code should work on any table of numbers, the story is just the example.
 
 ---
 
@@ -30,7 +30,7 @@ A note on the tasks: they are deliberately few. Several ask you to **predict** w
 ## Ground rules
 
 - **Deadline:** all PRs must be opened by **Oct 31**.
-- **Pick one option per level.** Levels 3 and 4 each offer two options, you can do either one of them or both.
+- **Pick one option per level.** Levels 3 and 4 each offer two options, you can chose 1 of them or both.
 - **One open PR per person at a time.** Finish or close one before opening the next.
 - **A second option in the same level is a bonus, not a requirement.** It is reviewed only after everyone's first PR has been looked at, so expect to wait.
 - **Review takes time.** One maintainer reviews everything, in batches, so please be patient and keep PRs focused.
@@ -41,10 +41,10 @@ A note on the tasks: they are deliberately few. Several ask you to **predict** w
 
 Goal: build the small math functions that ML models are made of. Pure Python: the `math` library is allowed, **NumPy is not**.
 
-1. **Similarity.** Implement dot product, cosine similarity and min-max normalization. Load `datasets/past_lunches.csv` (8 past mess lunches: queue length, plate waste fraction, kcal on the menu board, handwriting neatness). Today's lunch is: queue 45, plate waste 0.30, 2150 kcal, neatness 6.0. **Predict which past lunch is most similar to today's before running your code.** Then compute cosine similarity with and without min-max normalization, and explain any disagreement with your prediction. (Prefer your own data? Any table with 2+ numeric columns on different scales works. Say so in your notes.)
+1. **Similarity: a song recommender.** Implement dot product, cosine similarity and min-max normalization. Load `datasets/songs.csv` (10 made-up songs: tempo in BPM, duration in seconds, energy 0 to 1, danceability 0 to 1). You just loved a song with tempo 124, duration 210, energy 0.78, danceability 0.82. **Before running any code, predict which song in the file you would recommend next.** Then compute cosine similarity between your song and every song, with and without min-max normalization, and compare both rankings with your prediction. If they disagree, explain why. (Prefer your own data? Any table with 2+ numeric columns on different scales works. Say so in your notes.)
 2. **Squashing.** Implement sigmoid, ReLU and tanh. Find an input that breaks your sigmoid (hint: try large negative numbers), fix it, and explain why it broke.
 3. **`NOTES.md`** (under 200 words, written for a friend who hasn't taken maths):
-   - A linear model scores today's lunch as 47. Why is that a problem if you wanted the probability that the lunch is good, and what does sigmoid do about it?
+   - A linear model scores a song as 47. Why is that a problem if you wanted the probability that you will like it, and what does sigmoid do about it?
    - Sigmoid and tanh look similar. When might you prefer one over the other? (There is no single right answer. Reason it out.)
 
 Directory: `Level_1/<your-github-username>/`
@@ -106,17 +106,17 @@ Limit: **one open Level 3 PR per person** at a time.
 ---
 
 ## Level 4: Real Open Source
- 
+
 Goal: get a PR reviewed and merged in a live codebase. This is the level for people who already know their way around a project. You have two options, and they are not the same thing, so pick knowingly:
- 
+
 **4A. Guided: fix known bugs in a project we broke on purpose.** We built a small NumPy-only ML pipeline called **lunch-lab** (it loads the lunch data, scales it, trains kNN or logistic regression, reports metrics, saves the model and has a command-line interface) and then removed or broke pieces of it. Each removed piece is an **issue** in this repo, tagged `level4-guided`, with a difficulty label (`easy`, `medium`, `hard`). You pick one, fix it, and open a PR that we review. This is a *prepared* exercise, not a naturally occurring bug, and we say so openly. It still gives you a full issue, branch, PR, review and merge experience within Hacktober.
- 
+
 The project is in [`Level_4/A_guided/lunch-lab/`](Level_4/A_guided/lunch-lab/). Read its README first (it is broken too, and that is one of the issues).
- 
-How 4A works: open the Issues tab and filter by `level4-guided`. Each issue says what is missing and how we will check it. Your PR must change only the files that issue needs, and should include a test that fails without your fix and passes with it. The AI tool policy applies as in Level 3: disclose it and explain every line. There is no log file for 4A; your merged PR is the record. Because all the issues live in one project, the rule is one issue at a time.
- 
+
+How 4A works: open the Issues tab and filter by `level4-guided`. Comment on one and wait to be assigned. Each issue says what is missing and how we will check it. Your PR must change only the files that issue needs, and should include a test that fails without your fix and passes with it. The AI tool policy applies as in Level 3: disclose it and explain every line. There is no log file for 4A; your merged PR is the record. Because all the issues live in one project, the rule is one issue at a time.
+
 **4B. Real: contribute to any real open-source AI/ML project online** — a library, a tool, a research codebase, anything genuinely open to outside contributors. Find a real open issue, get it assigned or confirm it's fair game, and submit a real PR.
- 
+
 4B rules: your PR must be to a live, real repository that is not ours, and must get reviewed and (ideally) merged the normal way. No scaffolded bugs, no staged issues. This is the harder, more valuable path, because the maintainers are strangers and the outcome is not in our hands.
 
 ### Where to start for 4B
@@ -186,3 +186,8 @@ A merged docs fix or small bug fix is a great result. A huge PR that nobody revi
 
 Tips: keep PRs focused (one feature or fix each), sync your fork before starting new work, and ask in your PR thread or ask a lead if you are stuck. Full details, including how to sync your fork, are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
+---
+
+## Recognition
+
+Points are awarded by Enigma under its own scheme, so they are not listed here.

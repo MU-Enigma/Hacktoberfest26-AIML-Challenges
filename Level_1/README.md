@@ -7,12 +7,14 @@ Put your work in **`Level_1/<your-github-username>/`**. Full task description is
 - Your code (any file names you like), pure Python: the `math` library is allowed, **NumPy is not**
   - dot product, cosine similarity, min-max normalization
   - sigmoid, ReLU, tanh
-- Your predictions and results: which past lunch you predicted was most similar to today's, and what your code said with and without normalization
+- Your results: the song you predicted before running anything, the top 3 songs with and without normalization, and one line on whether they agree
 - `NOTES.md` (under 200 words, written for a friend who hasn't taken maths)
 
 ## Data
 
-`datasets/past_lunches.csv`. Today's lunch: queue 45, plate waste 0.30, 2150 kcal, neatness 6.0.
+`datasets/songs.csv`: 10 made-up songs. The song you just loved: tempo 124, duration 210, energy 0.78, danceability 0.82.
+
+When you min-max normalize, work out the min and max from the 10 songs in the file, and scale your song using those same numbers.
 
 ## Example layout
 
