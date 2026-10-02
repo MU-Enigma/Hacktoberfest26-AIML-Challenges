@@ -185,9 +185,3 @@ A merged docs fix or small bug fix is a great result. A huge PR that nobody revi
 8. Respond to review comments by pushing new commits to the same branch
 
 Tips: keep PRs focused (one feature or fix each), sync your fork before starting new work, and ask in your PR thread or ask a lead if you are stuck. Full details, including how to sync your fork, are in [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## Recognition
-
-Points are awarded by Enigma under its own scheme, so they are not listed here.
