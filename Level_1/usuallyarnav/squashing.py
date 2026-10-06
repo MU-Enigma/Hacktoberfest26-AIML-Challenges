@@ -33,3 +33,4 @@ if __name__ == "__main__":
     print("sigmoid(-710) =", sigmoid(-710))
     print("tanh(1000) =", tanh(1000), "| tanh(-1000) =", tanh(-1000))
     print("relu(-3) =", relu(-3), "| relu(2.5) =", relu(2.5))
+    
