@@ -8,7 +8,11 @@ def sigmoid(x):
     else: 
         e = math.exp(x)
         return e/(1+e)
-print(sigmoid(0))
-print(sigmoid(-710))
-print(sigmoid(-1000))
-print(sigmoid(1000))
+
+# there we go using tanh to squash 
+def tanh(x):
+    if x < 0:
+        return -tanh(-x)
+
+    t = math.exp(-2 * x)
+    return (1 - t) / (1 + t)

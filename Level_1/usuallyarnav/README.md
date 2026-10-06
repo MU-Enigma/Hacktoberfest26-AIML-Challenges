@@ -94,4 +94,3 @@ sigmoid_naive(-710) crashes with overflow error. A Python float can only hold so
 To fix it, for negative x, I multiplied the top and bottom of the formula by e^x. This gives the same answer, but now the exponent going into exp() is x itself, which is negative here, so e^x is a small number between 0 and 1 — it can never be too big to store.
 
 sigmoid(-710) now doesnt crash 
-
