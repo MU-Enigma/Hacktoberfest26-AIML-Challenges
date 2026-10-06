@@ -1,10 +1,10 @@
-## level 1 
+## level 1
 
  well , Rooftop Monsoon, as its tempo (124) matches mine exactly and its duration is almost identical to mine (210). I matched on these two and gave less weight to energy and danceability.
 
- ## Results
+## Results
 
- ```
+```
  Raw cosine similarity
 1 Rooftop Monsoon 0.999993619089402
 2 Fresher Night 0.9995730769230412
@@ -28,3 +28,75 @@ Min-max normalized cosine similarity
 9 Rooftop Monsoon 0.6423666248766786
 10 Last Bench Ballad 0.33671311229536516
 ```
+
+
+Well now to answer some questions:- 
+
+
+
+**>>> **q = [124, 210, 0.78, 0.82]
+
+**>>> **(0.78**2 + 0.82**2) / (124**2 + 210**2 + 0.78**2 + 0.82**2) * 100
+
+**0.00215342729656195**
+
+**>>> **124 / 210
+
+**0.5904761904761905**
+
+**>>> **from similarity import load_songs, DATA_PATH
+
+**>>> **titles, names, rows = load_songs(DATA_PATH)
+
+**>>> **for t, r in zip(titles, rows):
+
+**... **    **print(r[0] / r[1], t)**
+
+**...** **** **   **
+
+**0.5933014354066986 Rooftop Monsoon**
+
+**0.5365853658536586 Canteen Bass**
+
+**0.42162162162162165 Exam Week Lofi**
+
+**0.5517241379310345 Fresher Night**
+
+**0.30666666666666664 Last Bench Ballad**
+
+**0.7653061224489796 Bus Pass Anthem**
+
+**0.4435483870967742 Chai Break Acoustic**
+
+**0.46511627906976744 Hostel Corridor**
+
+**0.9659090909090909 Sprint to Class**
+
+**0.4444444444444444 Midnight Metro**
+
+**>>>** ****
+
+
+
+so this is the output form python shell 
+
+
+## Why they differ
+
+The energy and danceability values are tiny compared to tempo and duration, so they barely affect the vector's length. That means the vector's direction, and therefore cosine similarity, is really only determined by tempo and duration, even though all 4 numbers go into the formula.
+
+Rooftop Monsoon ranks first in raw cosine because its tempo/duration ratio is 0.593, which is the closest of all 10 songs to my own ratio of 0.590.
+
+My prediction was Rooftop Monsoon. It is rank 1 in the raw list, which matches my prediction, but rank 9 in the normalized list, which doesn't.
+
+I trust the raw ranking more, because a song doesn't have to feel exactly the same to be a good follow-up — tempo and overall pacing can matter more than energy and danceability. Even though Rooftop Monsoon's energy and danceability (0.3, 0.3) are much lower than mine (0.78, 0.82), its tempo and duration are nearly identical to mine, which is what I care about most.
+
+the share of my song from energy and danceabiliry is like 0.00215% that is as the vectors of these two are really small thereupon contribuing less to the direction , the large mag of tempo + duration allows me to say since tempo and duration dominate the vector's length, the dirn is basically set by tempo and duration alone, so comparing directions is really just comparing tempo/duration ratios
+
+however when we normalise it we actually see the contributions and that can be reflected in the change
+
+Rooftop Monsoon ranks first in raw cosine because its tempo/duration ratio is 0.593 which is the closest of all 10 songs to my own ratio of 0.59
+
+My prediction was Rooftop Monsoon. It is rank 1 in the raw list, which matches my prediction, but rank 9 in the other list which is simply sad but yep.. it didnt match my inital hypotheisis
+
+I trust the raw ranking more, because a song doesn't have to feel exactly the same to be a good foloow up tempo and overall pacing can matter more than energy and danceability. Even though Rooftop Monsoon's energy and danceability are much lower than mine, its tempo and duration are nearly identical to mine, which is what I care about most.
