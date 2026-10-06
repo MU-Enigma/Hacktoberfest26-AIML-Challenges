@@ -1,0 +1,5 @@
+## Why can't a score of 47 be a probability?
+A probabilityis between 0 and 1. A raw model score does not have this restriction, so a score of 47 cannot be treated as a probability directly. It could be converted into a probability using a function such as sigmoid, which squashes any score into the range 0 to 1. Since 47 is a large positive number, sigmoid turns it into a value extremely close to 1, meaning the model is almost certain.
+
+## Sigmoid or tanh?
+Sigmoid is useful when we want an output between 0 and 1, such as a probability or a binary classification output. Tanh is useful when we want an output between -1 and 1, because it can represent both positive and negative values. For example, a model predicting whether a review is positive or negative would want tanh, since the sign itsel carries meaning. The choice depends on what range of output the model needs.
