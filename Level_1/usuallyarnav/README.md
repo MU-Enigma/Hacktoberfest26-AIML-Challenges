@@ -29,10 +29,7 @@ Min-max normalized cosine similarity
 10 Last Bench Ballad 0.33671311229536516
 ```
 
-
-Well now to answer some questions:- 
-
-
+Well now to answer some questions:-
 
 **>>> **q = [124, 210, 0.78, 0.82]
 
@@ -76,21 +73,9 @@ Well now to answer some questions:-
 
 **>>>** ****
 
-
-
-so this is the output form python shell 
-
+so this is the output form python shell
 
 ## Why they differ
-
-The energy and danceability values are tiny compared to tempo and duration, so they barely affect the vector's length. That means the vector's direction, and therefore cosine similarity, is really only determined by tempo and duration, even though all 4 numbers go into the formula.
-
-Rooftop Monsoon ranks first in raw cosine because its tempo/duration ratio is 0.593, which is the closest of all 10 songs to my own ratio of 0.590.
-
-My prediction was Rooftop Monsoon. It is rank 1 in the raw list, which matches my prediction, but rank 9 in the normalized list, which doesn't.
-
-I trust the raw ranking more, because a song doesn't have to feel exactly the same to be a good follow-up — tempo and overall pacing can matter more than energy and danceability. Even though Rooftop Monsoon's energy and danceability (0.3, 0.3) are much lower than mine (0.78, 0.82), its tempo and duration are nearly identical to mine, which is what I care about most.
-
 the share of my song from energy and danceabiliry is like 0.00215% that is as the vectors of these two are really small thereupon contribuing less to the direction , the large mag of tempo + duration allows me to say since tempo and duration dominate the vector's length, the dirn is basically set by tempo and duration alone, so comparing directions is really just comparing tempo/duration ratios
 
 however when we normalise it we actually see the contributions and that can be reflected in the change
@@ -99,4 +84,14 @@ Rooftop Monsoon ranks first in raw cosine because its tempo/duration ratio is 0.
 
 My prediction was Rooftop Monsoon. It is rank 1 in the raw list, which matches my prediction, but rank 9 in the other list which is simply sad but yep.. it didnt match my inital hypotheisis
 
-I trust the raw ranking more, because a song doesn't have to feel exactly the same to be a good foloow up tempo and overall pacing can matter more than energy and danceability. Even though Rooftop Monsoon's energy and danceability are much lower than mine, its tempo and duration are nearly identical to mine, which is what I care about most.
+I trust the raw ranking more, because a song doesn't have to feel exactly the same to be a good foloow up tempo and overall pacing can matter more than energy and danceability. Even though Rooftop Monsoon's energy and danceability are much lower than mine, its tempo and duration are nearly identical to mine which is what matters to me
+
+
+## Breaking sigmoid
+
+sigmoid_naive(-710) crashes with overflow error. A Python float can only hold some range and Python raises an error instead of rounding it wrong.
+
+To fix it, for negative x, I multiplied the top and bottom of the formula by e^x. This gives the same answer, but now the exponent going into exp() is x itself, which is negative here, so e^x is a small number between 0 and 1 — it can never be too big to store.
+
+sigmoid(-710) now doesnt crash 
+
