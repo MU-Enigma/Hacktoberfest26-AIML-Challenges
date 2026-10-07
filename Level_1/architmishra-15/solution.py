@@ -25,11 +25,10 @@ def min_max_normalize(vector, mins, maxs):
 
 songs = []
 
-with open("../../datasets/songs.csv") as f:
+with open("../../datasets/songs.csv", "r") as f:
     r = csv.DictReader(f)
     for row in r:
-        features = [float(row['tempo_bpm']), float(row['duration_sec']), 
-                    float(row['energy']), float(row['danceability'])]
+        features = [float(row['tempo_bpm']), float(row['duration_sec']), float(row['energy']), float(row['danceability'])]
         songs.append((row['title'], features))
 
 target = [124, 120, 0.78, 0.82]
