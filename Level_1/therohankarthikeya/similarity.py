@@ -2,7 +2,6 @@ import math
 import csv
 # These are pre made toolboxes that are imported as we require it for mathematical functions like square root etc. and the other gives ability to read excel sheets.
 
-# --- MATH & SQUASHING FUNCTIONS ---
 
 def dot_product(v1, v2):
     return sum(x * y for x, y in zip(v1, v2))
@@ -21,16 +20,7 @@ def min_max_normalize(value, min_val, max_val):
         return 0.0
     return (value - min_val) / (max_val - min_val)
 
-def sigmoid(x):
-    return 1 / (1 + math.exp(-x))
-
-def relu(x):
-    return max(0.0, float(x))
-
-def tanh(x):
-    return math.tanh(x)
-
-# --- DATA PROCESSING ---
+# -- Process the songs and sorts it into Top 3 winners list -- (or Top 5 you can just tweak the values)
 
 def main():
     target_song = [124.0, 210.0, 0.78, 0.82] # this is actually for comparision type. You can edit your comparision to your liking
