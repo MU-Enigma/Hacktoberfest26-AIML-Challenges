@@ -1,0 +1,23 @@
+RAW cosine similarity
+  1.0000  Rooftop Monsoon
+  0.9996  Fresher Night
+  0.9992  Canteen Bass
+  0.9952  Hostel Corridor
+  0.9934  Midnight Metro
+  0.9933  Chai Break Acoustic
+  0.9928  Bus Pass Anthem
+  0.9910  Exam Week Lofi
+  0.9726  Sprint to Class
+  0.9723  Last Bench Ballad
+
+MIN-MAX NORMALIZED cosine similarity
+  0.9952  Fresher Night
+  0.9838  Canteen Bass
+  0.9754  Hostel Corridor
+  0.9158  Bus Pass Anthem
+  0.8856  Sprint to Class
+  0.8049  Midnight Metro
+  0.7413  Chai Break Acoustic
+  0.7146  Exam Week Lofi
+  0.6424  Rooftop Monsoon
+  0.3367  Last Bench Ballad
