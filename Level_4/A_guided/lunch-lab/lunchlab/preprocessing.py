@@ -79,11 +79,24 @@ class StandardScaler:
 
     def fit(self, X: np.ndarray) -> "StandardScaler":
         """Learn the per-column mean and standard deviation from X, shape (N, D)."""
-        raise NotImplementedError("StandardScaler.fit is not implemented yet")
+        X = _as_2d(X)
+        self.mean_ = X.mean(axis=0)
+        self.std_ = X.std(axis=0, ddof=0)
+        return self
 
     def transform(self, X: np.ndarray) -> np.ndarray:
-        """Standardize X, shape (B, D), using the statistics learned in fit."""
-        raise NotImplementedError("StandardScaler.transform is not implemented yet")
+        """Standardize X, shape (B, D), using the statistics learned in fit.
+
+        Returns:
+            Array of shape (B, D). Each column is (x - mean) / std, and a
+            column with std == 0 becomes all zeros.
+        """
+        _check_fitted(self.mean_)
+        X = _as_2d(X)
+        if X.shape[1] != len(self.mean_):
+            raise ValueError(f"expected X of shape (B, {len(self.mean_)})")
+        scale = np.where(self.std_ == 0, 1.0, self.std_)
+        return (X - self.mean_) / scale
 
     def fit_transform(self, X: np.ndarray) -> np.ndarray:
         """Fit on X, then transform X."""
@@ -91,12 +104,16 @@ class StandardScaler:
 
     def to_dict(self) -> Dict[str, Any]:
         """Return a JSON-friendly description of the fitted scaler."""
-        raise NotImplementedError("StandardScaler.to_dict is not implemented yet")
+        _check_fitted(self.mean_)
+        return {"type": "standard", "mean": self.mean_.tolist(), "std": self.std_.tolist()}
 
     @classmethod
     def from_dict(cls, d: Dict[str, Any]) -> "StandardScaler":
         """Rebuild a fitted scaler from the output of to_dict."""
-        raise NotImplementedError("StandardScaler.from_dict is not implemented yet")
+        scaler = cls()
+        scaler.mean_ = np.array(d["mean"], dtype=float)
+        scaler.std_ = np.array(d["std"], dtype=float)
+        return scaler
 
 
 SCALERS = {"minmax": MinMaxScaler, "standard": StandardScaler}
