@@ -1,0 +1,23 @@
+Pick: Fresher Night
+Runner-up: Canteen Bass
+
+Why I picked it:
+I treated tempo and duration as the columns that make two songs feel alike
+when you play them back to back. Fresher Night is only 4 BPM away from my
+loved song (128 vs 124) and 22 seconds away on duration (232 vs 210). It is
+also high on energy (0.90 vs 0.78) and danceability (0.88 vs 0.82), so the
+overall feel matches too.
+
+Where it is weakest:
+Energy is off by 0.12, which is the biggest gap on the feel columns. I
+accepted that because it is still a high-energy, danceable track, just a bit
+more intense.
+
+Why my runner-up lost:
+Canteen Bass is closer on energy (0.04 off) and danceability (0.03 off), but
+it is 8 BPM and 36 seconds away on tempo and duration. Since I weighted tempo
+and duration more, it came second.
+
+Column I mostly ignored:
+None completely, but I gave energy and danceability less weight than tempo,
+because their gaps are small numbers and I assumed they matter less.

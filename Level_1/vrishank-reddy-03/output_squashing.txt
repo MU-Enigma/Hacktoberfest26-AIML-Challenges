@@ -1,0 +1,8 @@
+x      sigmoid   relu   tanh(mine)  tanh(math)
+-5     0.0067    0.0    -0.9999      -0.9999
+-1     0.2689    0.0    -0.7616      -0.7616
+0      0.5000    0.0    0.0000      0.0000
+1      0.7311    1      0.7616      0.7616
+5      0.9933    5      0.9999      0.9999
+naive sigmoid broke at -1000: math range error
+fixed sigmoid at -1000: 0.0
