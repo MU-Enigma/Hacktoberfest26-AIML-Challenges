@@ -37,7 +37,8 @@ def confusion_matrix(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
 
 def accuracy(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """Fraction of predictions that match the true labels."""
-    raise NotImplementedError("accuracy is not implemented yet")
+    y_true, y_pred = _check(y_true, y_pred)
+    return float(np.mean(y_true == y_pred))
 
 
 def precision(y_true: np.ndarray, y_pred: np.ndarray) -> float:
