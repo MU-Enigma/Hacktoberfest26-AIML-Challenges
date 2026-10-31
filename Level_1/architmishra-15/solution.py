@@ -31,13 +31,13 @@ with open("../../datasets/songs.csv", "r") as f:
         features = [float(row['tempo_bpm']), float(row['duration_sec']), float(row['energy']), float(row['danceability'])]
         songs.append((row['title'], features))
 
-target = [124, 120, 0.78, 0.82]
+target = [124, 210, 0.78, 0.82]
 
 unnormalized = []
 normalized = []
 
 # FIXED: Added [target] to the pool so the global minimum for duration becomes 120
-all_features = [s[1] for s in songs] + [target]
+all_features = [s[1] for s in songs]
 mins, maxs = get_min_max(all_features)
 
 normalize_tgt = min_max_normalize(target, mins, maxs)
