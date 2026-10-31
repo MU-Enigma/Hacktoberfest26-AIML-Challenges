@@ -44,12 +44,16 @@ def accuracy(y_true: np.ndarray, y_pred: np.ndarray) -> float:
 def precision(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """TP / (TP + FP). Returns 0.0 if nothing was predicted positive."""
     tn, fp, fn, tp = _counts(y_true, y_pred)
+    if tp + fp == 0:
+        return 0.0
     return float(tp / (tp + fp))
 
 
 def recall(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """TP / (TP + FN). Returns 0.0 if there are no true positives to find."""
     tn, fp, fn, tp = _counts(y_true, y_pred)
+    if tp + fn == 0:
+        return 0.0
     return float(tp / (tp + fn))
 
 
@@ -57,6 +61,8 @@ def f1_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
     """Harmonic mean of precision and recall. Returns 0.0 if both are 0."""
     p = precision(y_true, y_pred)
     r = recall(y_true, y_pred)
+    if p + r == 0:
+        return 0.0
     return float(2 * p * r / (p + r))
 
 
