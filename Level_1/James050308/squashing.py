@@ -2,7 +2,7 @@ import math
 
 
 def sigmoid(x):
-    """Squash any real number into a value between 0 and 1."""
+    """Stable sigmoid implementation."""
     if x >= 0:
         z = math.exp(-x)
         return 1 / (1 + z)
@@ -25,7 +25,6 @@ def main():
     score = 47
 
     print("===== SQUASHING FUNCTION RESULTS =====")
-
     print(f"\nOriginal score: {score}")
 
     print("\n--- Sigmoid ---")
@@ -45,6 +44,15 @@ def main():
             f"ReLU = {relu(value):.4f}, "
             f"Tanh = {tanh(value):.4f}"
         )
+
+    print("\n--- Sigmoid Stability Test ---")
+    try:
+        naive_result = 1 / (1 + math.exp(1000))
+        print("Naive sigmoid(-1000):", naive_result)
+    except OverflowError:
+        print("Naive sigmoid(-1000): OverflowError!")
+
+    print("Stable sigmoid(-1000):", sigmoid(-1000))
 
 
 if __name__ == "__main__":
