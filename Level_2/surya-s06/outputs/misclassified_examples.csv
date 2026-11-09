@@ -1,0 +1,4 @@
+queue_length,plate_waste_fraction,menu_board_kcal,handwriting_neatness,actual,predicted
+28.0,0.609,1985.0,5.6,1,0
+39.0,0.422,1884.0,3.4,1,0
+58.0,0.491,1620.0,3.1,0,1
